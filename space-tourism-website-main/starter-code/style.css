@@ -71,7 +71,12 @@ nav {
     text-transform: uppercase;
     margin-left: 2rem;
 }
-
+.nav-links a:hover {
+    border-bottom: solid 3px rgba(255, 255, 255, 0.349);
+    border-radius: 1px;
+    padding-bottom: 33px;
+    padding-top: 35px;
+}
 .nav-links a:nth-child(1){
     border-bottom: solid 3px white;
     border-radius: 1px;    
@@ -117,12 +122,14 @@ main{
     flex-basis: 65%;
     letter-spacing: 0.2rem;
     min-width: 500px;
+    max-width: 500px;
 }
 .main-text p{
     font-family: 'Barlow', sans-serif;
     font-size: 1.125rem;
     max-width: 430px;
     letter-spacing: 0;
+    
 }
 button{
     border-radius: 50%;
@@ -150,3 +157,60 @@ button:hover{
 }
 
 
+@media screen and (max-width: 1074px){
+
+    html{
+        background-image: url('assets/home/background-home-tablet.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    .nav-links a{
+        font-size: 14px;
+    }
+    
+    .logo{
+        padding-left: 40px;
+    }
+    .nav-links{
+        width: 500px;
+        padding-left: 0;
+        height: 92px;
+    }
+    b {
+        display: none;
+    }
+    nav{
+        padding-top: 0;
+        padding-right: 48px;
+        padding: 0;
+    }
+    main{
+        padding-top: 5rem;
+        flex-direction: column;
+    }
+
+    .main-text{
+        text-align: center;
+        flex-basis: 100%;
+        margin: 0 auto;
+    }
+    .main-text p{
+        max-width: 444px;
+        margin: 0 auto;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        
+    }
+    button{
+        width: 242px;
+        height: 242px;
+        margin: 8rem auto 1rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    main{
+        margin: 0 auto;
+    }
+}
