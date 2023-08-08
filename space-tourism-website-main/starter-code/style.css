@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+*,*::before,*::after {
     box-sizing: border-box;
 }
 
@@ -13,34 +11,20 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+img,picture,video,canvas,svg {
     display: block;
     max-width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
+input,button,textarea,select {
     font: inherit;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p,h1,h2,h3,h4,h5,h6 {
     overflow-wrap: break-word;
 }
 
-#root,
-#__next {
+#root, #__next {
     isolation: isolate;
 }
 /* ////////////////////////////////////////////////////////////////// */
@@ -72,11 +56,11 @@ nav {
 .nav-links{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     backdrop-filter: blur(25px);
     background-color: rgba(255, 255, 255, 0.027) ;
     height: 96px;
     width: 830px;
+    padding-left: 75px;
 }
 .nav-links a{
     color: white;
@@ -85,6 +69,14 @@ nav {
     letter-spacing: 1.75px;
     font-size: 1rem;
     text-transform: uppercase;
+    margin-left: 2rem;
+}
+
+.nav-links a:nth-child(1){
+    border-bottom: solid 3px white;
+    border-radius: 1px;    
+    padding-bottom: 33px;
+    padding-top: 33px;
 }
 
 .nav-line{
@@ -107,7 +99,8 @@ h1{
 }
 .space{
     font-size: 9.375rem;
-    
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
 }
 
 
@@ -121,9 +114,9 @@ main{
 }
 
 .main-text{
-    flex-basis: 50%;
+    flex-basis: 65%;
     letter-spacing: 0.2rem;
-    min-width: 400px;
+    min-width: 500px;
 }
 .main-text p{
     font-family: 'Barlow', sans-serif;
@@ -149,3 +142,11 @@ button:hover{
     background-color: rgba(0, 0, 0, 0.068);
     color: white;
 }
+
+@media screen and (max-width: 1360px){
+    .nav-line{
+        display: none;
+    }
+}
+
+
