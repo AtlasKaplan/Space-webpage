@@ -93,7 +93,7 @@ nav {
     position: absolute;
 }
 
-b {
+.nav-numbers {
     padding-right: 0.5rem;
 } 
 h1{
@@ -131,7 +131,7 @@ main{
     letter-spacing: 0;
     
 }
-button{
+.main-btn{
     border-radius: 50%;
     border: none;
     height: 274px;
@@ -144,7 +144,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.main-btn:hover{
     backdrop-filter: blur(25px);
     background-color: rgba(0, 0, 0, 0.068);
     color: white;
@@ -177,7 +177,7 @@ button:hover{
         padding-left: 0;
         height: 92px;
     }
-    b {
+    .nav-numbers {
         display: none;
     }
     nav{
@@ -202,7 +202,7 @@ button:hover{
         line-height: 1.75rem;
         
     }
-    button{
+    .main-btn{
         width: 242px;
         height: 242px;
         margin: 8rem auto 1rem;
