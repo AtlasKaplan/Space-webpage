@@ -370,6 +370,9 @@ select {
         
     }
 
+        .primary-navigation[data-visible="true"] {
+            transform: translateX(0);
+        }
     .primary-navigation.underline-indicators>* {
         border: 0;
     }
