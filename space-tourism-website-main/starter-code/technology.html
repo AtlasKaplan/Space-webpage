@@ -43,20 +43,34 @@
     </nav>
   </header>
 
+  <main id="main" class="grid-container grid-container--technology flow">
+    <h1 class="numbered-title"><span aria-hidden="true">03</span> Space launch 101</h1>
+
+    <picture id="launch-image">
+      <source srcset="assets/technology/image-launch-vehicle-landscape.jpg" type="image/webp">
+      <img src="assets/technology/image-launch-vehicle-landscape.jpg" alt="launch">
+    </picture>
+
+  <div class="dot-indicators flex" role="tablist" aria-label="technology list">
+    <button aria-selected="true" aria-controls="launch-tab" role="tab" data-image="launch-image" tabindex="0"><span
+        class="sr-only">Launch</span>1</button>
+    <button aria-selected="false" aria-controls="port-tab" role="tab" data-image="port-image" tabindex="-1"><span
+        class="sr-only">Space port</span>2</button>
+    <button aria-selected="false" aria-controls="capsule-tab" role="tab" data-image="capsule-image" tabindex="-1"><span
+        class="sr-only">Space Capsule</span>3</button>
+  </div>
+
+<article class="technology-details flow" id="launch-tab" role="tabpanel" tabindex="0">
+  <header class="flow flow--space-small">
+    <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+    <p class="fs-700 uppercase ff-serif">Launch Vehicle</p>
+  </header>
+  <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space,
+  usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+  it's quite an awe-inspiring sight on the launch</p>
+</article>
 
 
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Space capsule
-
-  A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
-  capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
-  you'll spend your time during the flight. It includes a space gym, cinema, 
-  and plenty of other activities to keep you entertained.
+</main>
 </body>
 </html>
