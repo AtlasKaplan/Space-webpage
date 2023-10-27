@@ -585,6 +585,7 @@ body {
     grid-area: image;
     max-width: 70%;
     min-width: 300px;
+    align-self: flex-start;
 }
 
 .grid-container--destination>.tab-list {
@@ -699,10 +700,18 @@ body {
     }
 
     .grid-container--crew {
+        grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 22rem) minmax(1rem, 1fr);
+        justify-items: start;
         grid-template-areas:
             '. title title .'
             '. content image .'
             '. dot image .';
+    }
+
+    .grid-container--crew>picture {
+        grid-column: span 2;
+        align-self: end;
+        max-width: 80%;
     }
     .dot-indicators,.crew-details{
         justify-self: flex-start;
