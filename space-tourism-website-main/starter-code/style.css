@@ -663,12 +663,6 @@ body {
     margin-top: 0;
     align-self:flex-start;
 }
-.grid-container--technology>picture>img{
-
-    min-height: 180px;
-    max-height: 300px;
-    
-}
 .grid-container--technology>.technology-details {
     grid-area: content;
     align-self: flex-start;
@@ -742,6 +736,7 @@ article>p:nth-child(2){
     
     .grid-container--technology>picture>img {
         width: 100vw;
+        max-width: 700px;
     }
     
     .grid-container--technology>.technology-details {
@@ -838,39 +833,55 @@ article>p:nth-child(2){
 
 
 
+
+
+
+@media (min-width: 74.0625rem){
     .grid-container--technology {
-        grid-template-columns: minmax(1rem, 5%) minmax(1rem, 10%) minmax(1rem, 1fr) minmax(1rem, 1fr);        grid-template-areas:
-            '. title title .'
-            '. dot content image'
-            '. dot content image'
-;
-    }
-    .grid-container--technology>.dot-indicators {
-        flex-direction: column;
-    }
-    .grid-container--technology>picture>img {
-        width: 525px;
-        max-height: 500px;
-    }
-        .grid-container--technology>picture{
+            grid-template-columns: minmax(1rem, 5%) minmax(1rem, 10%) minmax(1rem, 1fr) minmax(1rem, 1fr);
+            grid-template-areas:
+                '. title title .'
+                '. dot content image'
+                '. dot content image'
+            ;
+        }
+    
+        .grid-container--technology>.dot-indicators {
+            flex-direction: column;
+        }
+    
+        .grid-container--technology>picture>img {
+            width: 525px;
+            max-height: 500px;
+            min-height: 450px;
+        }
+    
+        .grid-container--technology>picture {
             justify-self: flex-end;
         }
-    .technology-details>p {
-        padding: 0rem;
+    
+        .technology-details>p {
+            padding: 0rem;
+        }
+    
+        .grid-container--technology>.technology-details {
+            margin-top: 84px;
+            padding-right: 1.75rem;
+        }
+    
+        .grid-container--technology>.dot-indicators {
+            margin-top: 40px;
+            gap: 1.5rem;
+        }
+    
+        .grid-container--technology>.dot-indicators>button {
+            width: 80px;
+            height: 80px;
+            padding: 20px;
+        }
     }
-
-    .grid-container--technology>.technology-details{
-        margin-top: 84px;
-    }
-    .grid-container--technology>.dot-indicators{
-        margin-top: 40px;
-        gap: 1.5rem;
-    }
-    .grid-container--technology>.dot-indicators>button {
-        width: 80px;
-        height: 80px;
-        padding: 20px;
+    .grid-container--technology>.numbered-title{
+        padding-left: 4rem;
+        align-self: flex-start;
     }
 }
-
-
