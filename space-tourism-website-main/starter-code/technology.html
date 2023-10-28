@@ -25,7 +25,7 @@
 
   <header class="primary-header flex">
     <div>
-      <img src="assets/shared/logo.svg" alt="space tourism logo" class="logo">
+      <a href="index.html"><img src="assets/shared/logo.svg" alt="space tourism logo" class="logo"></a>
     </div>
     <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
         aria-expanded="false">Menu</span></button>
@@ -47,8 +47,18 @@
     <h1 class="numbered-title"><span aria-hidden="true">03</span> Space launch 101</h1>
 
     <picture id="launch-image">
-      <source srcset="assets/technology/image-launch-vehicle-landscape.jpg" type="image/webp">
+      <source srcset="assets/Technology/image-launch-vehicle-portrait.jpg" media="(min-width: 48.0625rem)" />
       <img src="assets/technology/image-launch-vehicle-landscape.jpg" alt="launch">
+    </picture>
+
+    <picture hidden id="port-image">
+      <source srcset="assets/technology/image-spaceport-portrait.jpg" media="(min-width: 48.0625rem)" />
+      <img src="assets/technology/image-spaceport-landscape.jpg" alt="port">
+    </picture>
+    
+    <picture hidden id="capsule-image">
+      <source srcset="assets/technology/image-space-capsule-portrait.jpg" media="(min-width: 48.0625rem)" />
+      <img src="assets/technology/image-space-capsule-landscape.jpg" alt="capsule">
     </picture>
 
   <div class="dot-indicators flex" role="tablist" aria-label="technology list">
@@ -70,6 +80,25 @@
   it's quite an awe-inspiring sight on the launch</p>
 </article>
 
+<article hidden class="technology-details flow" id="port-tab" role="tabpanel" tabindex="0">
+  <header class="flow flow--space-small">
+    <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+    <p class="fs-700 uppercase ff-serif">Spaceport</p>
+  </header>
+  <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or
+  airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the
+  Earth’s rotation for launch.</p>
+</article>
+
+<article hidden class="technology-details flow" id="capsule-tab" role="tabpanel" tabindex="0">
+  <header class="flow flow--space-small">
+    <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+    <p class="fs-700 uppercase ff-serif">Space capsule</p>
+  </header>
+  <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere
+  without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and
+  plenty of other activities to keep you entertained.</p>
+</article>
 
 </main>
 </body>

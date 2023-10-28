@@ -321,6 +321,7 @@ select {
 
 .logo {
     margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+    cursor: pointer;
 }
 .primary-header {
     justify-content: space-between;
@@ -450,6 +451,8 @@ select {
     border-color: hsl(var(--clr-white) / 1);
 }
 
+
+
 .tab-list {
     --gap: 2rem;
 }
@@ -469,6 +472,10 @@ select {
 
 .dot-indicators>[aria-selected="true"] {
     background-color: hsl(var(--clr-white) / 1);
+}
+.grid-container--technology>.dot-indicators>[aria-selected="true"] {
+    background-color: hsl(var(--clr-white) / 1);
+    color: black;
 }
 
 /* ----------------------------- */
@@ -657,7 +664,7 @@ body {
     align-self:flex-start;
 }
 .grid-container--technology>picture>img{
-  
+
     min-height: 180px;
     max-height: 300px;
     
@@ -684,8 +691,16 @@ article>p:nth-child(2){
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border: 0.5px solid white;
+    border: 0.5px solid rgba(255, 255, 255, 0.507);
     color: var(--clr-white);
+    font-family: var(--ff-serif);
+    padding-top: 9px;
+    
+}
+.grid-container--technology>.dot-indicators>button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: 0.5s;
 }
 .technology-details>header>h2 {
     font-family: var(--ff-sans-cond);
@@ -757,6 +772,8 @@ article>p:nth-child(2){
     .grid-container--technology>.dot-indicators>button {
         width: 60px;
         height: 60px;
+        font-size: 1.5rem;
+        
     }
 }
 @media (min-width: 48.0625rem) {
@@ -821,7 +838,39 @@ article>p:nth-child(2){
 
 
 
-    
+    .grid-container--technology {
+        grid-template-columns: minmax(1rem, 5%) minmax(1rem, 10%) minmax(1rem, 1fr) minmax(1rem, 1fr);        grid-template-areas:
+            '. title title .'
+            '. dot content image'
+            '. dot content image'
+;
+    }
+    .grid-container--technology>.dot-indicators {
+        flex-direction: column;
+    }
+    .grid-container--technology>picture>img {
+        width: 525px;
+        max-height: 500px;
+    }
+        .grid-container--technology>picture{
+            justify-self: flex-end;
+        }
+    .technology-details>p {
+        padding: 0rem;
+    }
+
+    .grid-container--technology>.technology-details{
+        margin-top: 84px;
+    }
+    .grid-container--technology>.dot-indicators{
+        margin-top: 40px;
+        gap: 1.5rem;
+    }
+    .grid-container--technology>.dot-indicators>button {
+        width: 80px;
+        height: 80px;
+        padding: 20px;
+    }
 }
 
 
